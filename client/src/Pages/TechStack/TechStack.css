@@ -1,0 +1,9 @@
+.tech_stack {
+    border: 2px solid blue;
+    margin: 9px auto;
+    width: 90%;
+}
+
+.tech_stack_list .tech_icon {
+    width: 60px;
+}

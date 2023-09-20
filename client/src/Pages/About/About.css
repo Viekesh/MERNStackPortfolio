@@ -1,0 +1,27 @@
+.about .row .profile_img img {
+    width: 60px;
+}
+
+.about .content {
+    border: 2px solid blue;
+    margin: 15px auto;
+    width: 90%;
+    font-family: sans-serif;
+}
+
+.about .content h3 {
+    font-size: 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.content .child_1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.content .profession {
+    font-size: 15px;
+    font-weight: 600;
+}
+

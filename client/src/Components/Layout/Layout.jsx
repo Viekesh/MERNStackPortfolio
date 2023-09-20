@@ -3,6 +3,8 @@ import "./Layout.css";
 import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from "react-icons/ai";
 import LandingPage from "../../Pages/LandingPage/LandingPage";
 import Menu from "../Menu/Menu";
+import About from "../../Pages/About/About";
+import TechStack from "../../Pages/TechStack/TechStack";
 
 const Layout = () => {
   const [toggle, setToggle] = useState(true);
@@ -29,6 +31,8 @@ const Layout = () => {
         </div>
         <div className="container">
           <LandingPage />
+          <About />
+          <TechStack />
         </div>
       </div>
     </>
