@@ -2,6 +2,8 @@ import { Component, createRef } from "react";
 import debounce from "lodash.debounce";
 import SearchResults from "./Components/SearchResults";
 import SetUnits from "./Components/SetUnit";
+import WeatherReport from "./Components/WeatherReport";
+import "./WeatherWatch.css";
 
 
 
@@ -23,7 +25,7 @@ class WeatherWatch extends Component {
         selectedLocId: 0,
 
         // default temprature unit is centigrate "C"
-        tempUnit: "C",
+        tempUnits: "C",
 
         // then weather data which is the actual data of the given location,
         weatherData: {},
@@ -32,12 +34,47 @@ class WeatherWatch extends Component {
     // To define a reference which you're going to then connect to our input component.
     searchRef = createRef();
 
+    componentDidMount() {
+        this.searchRef.current.focus();
+        this.getWeather();
+    }
+
+    componentDidUpdate(_, prevState) {
+        if (
+            prevState.selectedLocId !== this.state.selectedLocId ||
+            prevState.tempUnits !== this.state.tempUnits
+        ) {
+            this.getWeather(this.state.selectedLocId)
+        }
+    }
+
     searchLocations = debounce(keyword => {
         fetch(`https://api.weatherserver.com/weather/cities/${keyword}`)
             .then(res => res.json())
             .then(({ results }) => this.setState({ searchResults: results, error: false }))
             .catch(() => this.setState({ error: true }));
     }, 200);
+
+    getWeather = () => {
+        this.setState({
+            searchResults: [],
+            isLoading: true,
+            error: false,
+        });
+
+        this.searchRef.current.value = "";
+
+        fetch(`https://api.weatherserver.com/weather/current/${this.state.selectedLocId}/${this.state.tempUnits}`)
+            .then(res => res.json())
+            .then(results => this.setState({
+                weatherData: results,
+                isLoading: false,
+            }))
+            .catch(() => this.setState({ error: true }));
+    }
+
+    // Now how do you invoke getWeather? How do you get this functioning? So, first thing we wanna do is, we
+    // define a lifecycle method here, which is componentDidMount, create it first...
 
     render() {
         return (
@@ -57,6 +94,19 @@ class WeatherWatch extends Component {
                         value={this.state.tempUnit}
                         onSet={e => this.setState({ tempUnit: e.target.value })}
                     />
+
+                    {
+                        this.state.isLoading ?
+                            (<div className="is_loading" />) :
+                            <WeatherReport
+                                weatherData={this.state.weatherData}
+                                units={this.state.tempUnits}
+                            />
+                    }
+
+                    {
+                        this.state.error ? <div className="error-panel" /> : null
+                    }
                 </div>
             </>
         )

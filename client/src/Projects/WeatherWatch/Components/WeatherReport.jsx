@@ -17,6 +17,7 @@ const WeatherReport = ({ weatherData, units }) => {
         pressure,
         humidity
     } = weatherData;
+
     return (
         <>
             <div className="weather_Report">
@@ -36,7 +37,7 @@ const WeatherReport = ({ weatherData, units }) => {
                     </div>
                     <div>
                         <p>Minimum Temprature</p>
-                        <h2>{temp_min}&dig{units}</h2>
+                        <h2>{temp_min}&deg;{units}</h2>
                     </div>
                 </div>
 
