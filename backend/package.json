@@ -1,0 +1,35 @@
+{
+  "name": "mernstackprojects",
+  "version": "1.0.0",
+  "description": "Here you I have build different types of projects using MERN stack and related technologies.",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Viekesh/MERNStackPortfolio.git"
+  },
+  "keywords": [
+    "MERN",
+    "stack",
+    "projects"
+  ],
+  "author": "Vikesh Gaikwad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Viekesh/MERNStackPortfolio/issues"
+  },
+  "homepage": "https://github.com/Viekesh/MERNStackPortfolio#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-joi-validation": "^5.0.1",
+    "joi": "^17.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.6.1",
+    "nodemon": "^3.0.1"
+  }
+}

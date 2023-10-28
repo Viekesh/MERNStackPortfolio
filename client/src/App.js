@@ -1,10 +1,11 @@
-import React from 'react'
-import Layout from './Components/Layout/Layout';
+import React from 'react';
+import "./App.css";
+import ReactRouter from './ReactRouterDom/ReactRouter';
 
 const App = () => {
   return (
     <>
-      <Layout />
+      <ReactRouter />
     </>
   )
 }

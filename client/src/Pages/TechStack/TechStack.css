@@ -1,9 +1,26 @@
 .tech_stack {
-    border: 2px solid blue;
+    border: 1px solid transparent;
     margin: 9px auto;
     width: 90%;
 }
 
+.tech_stack_list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tech_stack_list h3 {
+    border: 1px solid gray;
+    border-radius: 15px;
+    width: 120px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
 .tech_stack_list .tech_icon {
-    width: 60px;
+    margin: 3px 3px 0px 18px;
 }

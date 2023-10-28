@@ -22,6 +22,36 @@ const Menu = ({ toggle }) => {
       )} */}
 
       {toggle ? (
+        <div className="nav-items">
+          <div className="nav-item">
+            <div className="nav-link">{<AiFillHome title="Home" />}</div>
+          </div>
+
+          <div className="nav-item">
+            <div className="nav-link">{<FcAbout title="About" />}</div>
+          </div>
+
+          <div className="nav-item">
+            <div className="nav-link">{<AiFillProject title="Projects" />}</div>
+          </div>
+
+          <div className="nav-item">
+            <div className="nav-link">
+              {<PiShareNetworkFill title="Tech Stack" />}
+            </div>
+          </div>
+
+          <div className="nav-item">
+            <div className="nav-link">{<BsWhatsapp title="Connect" />}</div>
+          </div>
+
+          <div className="nav-item">
+            <div className="nav-link">
+              {<GoCodeReview title="Testinomial" />}
+            </div>
+          </div>
+        </div>
+      ) : (
         <>
           <div className="navbar-profile-pic">
             <img
@@ -68,36 +98,6 @@ const Menu = ({ toggle }) => {
             </div>
           </div>
         </>
-      ) : (
-        <div className="nav-items">
-          <div className="nav-item">
-            <div className="nav-link">{<AiFillHome title="Home" />}</div>
-          </div>
-
-          <div className="nav-item">
-            <div className="nav-link">{<FcAbout title="About" />}</div>
-          </div>
-
-          <div className="nav-item">
-            <div className="nav-link">{<AiFillProject title="Projects" />}</div>
-          </div>
-
-          <div className="nav-item">
-            <div className="nav-link">
-              {<PiShareNetworkFill title="Tech Stack" />}
-            </div>
-          </div>
-
-          <div className="nav-item">
-            <div className="nav-link">{<BsWhatsapp title="Connect" />}</div>
-          </div>
-
-          <div className="nav-item">
-            <div className="nav-link">
-              {<GoCodeReview title="Testinomial" />}
-            </div>
-          </div>
-        </div>
       )}
     </>
   );

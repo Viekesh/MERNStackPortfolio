@@ -13,9 +13,7 @@
 
 .sidebar-toggle-icons {
     border: 3px solid yellow;
-    display: flex;
-    align-items: right;
-    justify-content: space-between;
+    text-align: right;
     cursor: pointer;
 }
 
@@ -32,6 +30,6 @@
 }
 
 .container {
-    border: 3px solid pink;
+    border: 1px solid pink;
     width: 100%;
 }
