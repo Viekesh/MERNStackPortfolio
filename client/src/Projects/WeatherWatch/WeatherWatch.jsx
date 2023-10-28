@@ -1,6 +1,7 @@
 import { Component, createRef } from "react";
 import debounce from "lodash.debounce";
 import SearchResults from "./Components/SearchResults";
+import SetUnits from "./Components/SetUnit";
 
 
 
@@ -52,6 +53,10 @@ class WeatherWatch extends Component {
                             />
                         )
                     }
+                    <SetUnits
+                        value={this.state.tempUnit}
+                        onSet={e => this.setState({ tempUnit: e.target.value })}
+                    />
                 </div>
             </>
         )
