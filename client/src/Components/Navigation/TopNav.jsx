@@ -31,8 +31,8 @@ const TopNav = () => {
             </div>
             <div className="company_name x_y_axis_center">
               <h1>
-                <span className="logo_techset">techSet</span>
-                <span className="logo_code">Code</span>
+                <span className="logo_techset">Port</span>
+                <span className="logo_code">Folio</span>
               </h1>
             </div>
           </div>

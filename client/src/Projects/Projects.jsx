@@ -9,6 +9,7 @@ const Projects = () => {
         <h3>Projects</h3>
         <div className="projects_lists">
           <NavLink to="/WeatherWatch">Weather Watch</NavLink>
+          <NavLink to="/WeatherCheck">Weather Check</NavLink>
         </div>
       </div>
     </>

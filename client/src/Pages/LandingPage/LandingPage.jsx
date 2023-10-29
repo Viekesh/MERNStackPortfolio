@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./LandingPage.css";
+import TopNav from "../../Components/Navigation/TopNav";
 
 
 
 const LandingPage = () => {
+
+  const [activeTab, setActiveTab] = useState("TechStack");
+
   return (
     <>
       <div className="landing_page">
+        <TopNav />
       </div>
     </>
   );
