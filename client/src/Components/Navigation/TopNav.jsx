@@ -24,11 +24,11 @@ const TopNav = () => {
       <div className="top_nav">
         <div className="nav_elements x_axis_center">
           <div className="logo x_y_axis_center">
-            <div className="icon x_y_axis_center">
+            {/* <div className="icon x_y_axis_center">
               <div className="icon_box .x_y_axis_center">
                 <img src={logo} alt="logo_icon" />
               </div>
-            </div>
+            </div> */}
             <div className="company_name x_y_axis_center">
               <h1>
                 <span className="logo_techset">Port</span>

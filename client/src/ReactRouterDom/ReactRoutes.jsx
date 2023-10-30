@@ -3,6 +3,7 @@ import LandingPage from "../Pages/LandingPage/LandingPage"
 import Projects from "../Projects/Projects";
 import WeatherWatch from "../Projects/WeatherWatch/WeatherWatch";
 import WeatherCheck from "../Projects/WeatherWatch/WeatherCheck";
+import ToDoList from "../Projects/ToDoList/ToDoList";
 
 
 
@@ -14,6 +15,7 @@ const ReactRoutes = () => {
                 <Route path="/Projects" element={<Projects />} />
                 <Route path="/WeatherWatch" element={<WeatherWatch />} />
                 <Route path="/WeatherCheck" element={<WeatherCheck />} />
+                <Route path="/ToDoList" element={<ToDoList />} />
             </Routes>
         </>
     )

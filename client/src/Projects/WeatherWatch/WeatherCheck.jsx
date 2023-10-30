@@ -1,5 +1,6 @@
 import { createRef, useState } from "react";
 import WeatherReports from "./Components/WeatherReports";
+import "./WeatherCheck.css";
 
 
 
