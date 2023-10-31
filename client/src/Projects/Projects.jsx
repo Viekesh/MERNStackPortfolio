@@ -8,9 +8,9 @@ const Projects = () => {
       <div className="projects_list">
         <h3>Projects</h3>
         <div className="projects_lists">
-          <NavLink to="/WeatherWatch">Weather Watch</NavLink>
-          <NavLink to="/WeatherCheck">Weather Check</NavLink>
-          <NavLink to="/ToDoList">To Do List</NavLink>
+          {/* <NavLink to="/WeatherWatch">Weather Watch</NavLink> */}
+          {/* <NavLink to="/WeatherCheck">Weather Check</NavLink> */}
+          {/* <NavLink to="/ToDoList">To Do List</NavLink> */}
         </div>
       </div>
     </>
